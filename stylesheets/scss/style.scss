@@ -178,7 +178,14 @@ p {
 		@include centerY;
 		background: center / cover url("../../assets/images/filming.jpg");
 		left: 0;
-		box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+//		&::after {
+//			content: "";
+//			width: calc(100% + 50px);
+//			height: calc(100% + 50px);
+//			@include centerer;
+//			border: 1px solid rgba(0,0,0, 0.1);
+//		}
+//		box-shadow: 0 5px 30px rgba(0,0,0,0.3);
 	}
 	.portfolio-container {
 		@include centerY;
