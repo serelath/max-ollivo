@@ -22,8 +22,8 @@ $(document).ready(function() {
 		$(".portfolio-item a h2").removeClass("active");
 		$(this).find("h2").addClass("active");
 			$('.thumbnail').css({'background-image' : 'url("' + $(this).attr("data-image") + '")'});
-		$('.thumbnail').removeClass('thumbnail-active');
-		$('.thumbnail').addClass('thumbnail-active');
+//		$('.thumbnail').removeClass('thumbnail-active');
+//		$('.thumbnail').addClass('thumbnail-active');
 	});
   
 });
