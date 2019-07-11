@@ -144,7 +144,7 @@ p {
 				height: 60px;
 				opacity: 0;
 				animation: fadeIn 1s forwards;
-				animation-delay: 1s;
+				animation-delay: 2s;
 			}
 			&:nth-child(2) {
 				top: 10px;
@@ -154,13 +154,24 @@ p {
 				position: absolute;
 				@include centerX;
 				animation: fadeIn 0.5s forwards, scrollDown 5s infinite;
-				animation-delay: 2s;
+				animation-delay: 3s;
 				border-radius: 10px;
 				background-color: white;
 				border: 1px solid white;
 			}
 		}
 	}
+}
+
+///////////////
+// PORTFOLIO //
+///////////////
+#portfolio {
+	height: 110vh;
+	width: 100vw;
+	background-color: #ddd;
+	position: relative;
+	z-index: 2;
 }
 
 ///////////
