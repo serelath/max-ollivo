@@ -172,6 +172,30 @@ p {
 	background-color: #ddd;
 	position: relative;
 	z-index: 2;
+	.container {
+		height: 100%;
+	
+		.portfolio-container {
+			@include centerY;
+			h3 {
+				color: $black;
+			}
+			.portfolio-item {
+				a {
+					text-decoration: none;
+				}
+				h2 {
+					color: $grey;
+					&.active {
+						color: $red;
+						font-size: 3rem;
+						transform: translateX(-25px);
+					}
+				}
+			}
+		}
+	}
+	
 }
 
 ///////////

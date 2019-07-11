@@ -192,6 +192,26 @@ p {
   background-color: #ddd;
   position: relative;
   z-index: 2; }
+  #portfolio .container {
+    height: 100%; }
+    #portfolio .container .portfolio-container {
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      top: 50%;
+      position: absolute; }
+      #portfolio .container .portfolio-container h3 {
+        color: #070707; }
+      #portfolio .container .portfolio-container .portfolio-item a {
+        text-decoration: none; }
+      #portfolio .container .portfolio-container .portfolio-item h2 {
+        color: #aaa; }
+        #portfolio .container .portfolio-container .portfolio-item h2.active {
+          color: #d94141;
+          font-size: 3rem;
+          -webkit-transform: translateX(-25px);
+          -ms-transform: translateX(-25px);
+          transform: translateX(-25px); }
 
 #about {
   background-color: #070707;
