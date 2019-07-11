@@ -11,8 +11,11 @@ $(document).ready(function() {
     var scrollTop = $(window).scrollTop();
     
     // Set the new background position.
-    $('#landing video').css({'top' : (scrollTop/30 + 50)+'%'});
-    $('#landing .scroll-down').css({'bottom' : -(scrollTop/15)+'%'});
+    $('#landing video').css({'top' : (scrollTop/50 + 50)+'%'});
+    $('#landing .scroll-down').css({'bottom' : 'calc(' + -(scrollTop/25) + '% + 25px)'});
+	  
+	$('#about .img').css({'background-position' : 'auto ' + (scrollTop/25 + 100) + '%'});
+	 
   });
   
 });

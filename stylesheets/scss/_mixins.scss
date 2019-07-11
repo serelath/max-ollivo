@@ -9,6 +9,11 @@
     left: 50%;
     position: absolute;
 }
+@mixin centerY {
+    transform: translateY(-50%);
+    top: 50%;
+    position: absolute;
+}
 @mixin mQ($px) {
     @media (max-width:$px) { @content; }
 }
