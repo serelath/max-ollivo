@@ -243,7 +243,8 @@ p {
 	position: relative;
 	z-index: 2;
 	.text {
-		@include centerY;
+		@include centerer;
+		left: 25%;
 		z-index: 3;
 		i {
 			font-size: 1.3rem;
