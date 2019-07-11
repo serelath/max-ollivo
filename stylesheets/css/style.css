@@ -53,10 +53,7 @@ p {
 .navbar-container {
   position: fixed;
   z-index: 100;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); }
+  background-color: rgba(0, 0, 0, 0); }
   .navbar-container .navbar-brand {
     font-size: 2.5rem;
     font-family: "Bungee", sans-serif;

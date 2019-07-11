@@ -16,6 +16,12 @@ $(document).ready(function() {
 	  
 	$('#about .img').css({'background-position' : 'auto ' + (scrollTop/25 + 100) + '%'});
 	
+	if (scrollTop >= 100) {
+		$(".navbar-container").css({'background-color' : 'rgba(0,0,0,0.95)'});
+	} else {
+		$(".navbar-container").css({'background-color' : 'rgba(0,0,0,0)'});
+	}
+	  
   });
 	
 	$(".portfolio-item a").hover(function() {
