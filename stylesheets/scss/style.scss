@@ -171,14 +171,14 @@ p {
 	to {background-size: 105% auto}
 }
 #portfolio {
-	height: 110vh;
+	height: 120vh;
 	width: 100vw;
-	background-color: #ddd;
+	background-color: $white;
 	position: relative;
 	z-index: 2;
 	.thumbnail {
-		width: 60vw;
-		height: 60vh;
+		width: 75vw;
+		height: 90vh;
 		@include centerY;
 		background-position: center;
 		background-size: 100% auto;
@@ -188,7 +188,7 @@ p {
 		&.thumbnail-active {
 			opacity: 0;
 			animation: fadeIn 1s forwards, zoomIn 2s forwards;
-			transition: 1s;
+			transition: 0s;
 		}
 		&::before {
 			content: '';

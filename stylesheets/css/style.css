@@ -199,14 +199,14 @@ p {
     background-size: 105% auto; } }
 
 #portfolio {
-  height: 110vh;
+  height: 120vh;
   width: 100vw;
-  background-color: #ddd;
+  background-color: #eee;
   position: relative;
   z-index: 2; }
   #portfolio .thumbnail {
-    width: 60vw;
-    height: 60vh;
+    width: 75vw;
+    height: 90vh;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -223,9 +223,9 @@ p {
       opacity: 0;
       -webkit-animation: fadeIn 1s forwards, zoomIn 2s forwards;
       animation: fadeIn 1s forwards, zoomIn 2s forwards;
-      -webkit-transition: 1s;
-      -o-transition: 1s;
-      transition: 1s; }
+      -webkit-transition: 0s;
+      -o-transition: 0s;
+      transition: 0s; }
     #portfolio .thumbnail::before {
       content: '';
       width: 100%;
