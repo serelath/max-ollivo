@@ -242,9 +242,15 @@ p {
 	width: 100vw;
 	position: relative;
 	z-index: 2;
+	.about-container {
+		width: 50vw;
+		position: absolute;
+		@include centerY;
+		left: 0;
+	}
 	.text {
 		@include centerer;
-		left: 25%;
+		left: 50%;
 		z-index: 3;
 		i {
 			font-size: 1.3rem;
