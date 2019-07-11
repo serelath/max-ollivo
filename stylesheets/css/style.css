@@ -192,26 +192,36 @@ p {
   background-color: #ddd;
   position: relative;
   z-index: 2; }
-  #portfolio .container {
-    height: 100%; }
-    #portfolio .container .portfolio-container {
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      top: 50%;
-      position: absolute; }
-      #portfolio .container .portfolio-container h3 {
-        color: #070707; }
-      #portfolio .container .portfolio-container .portfolio-item a {
-        text-decoration: none; }
-      #portfolio .container .portfolio-container .portfolio-item h2 {
-        color: #aaa; }
-        #portfolio .container .portfolio-container .portfolio-item h2.active {
-          color: #d94141;
-          font-size: 3rem;
-          -webkit-transform: translateX(-25px);
-          -ms-transform: translateX(-25px);
-          transform: translateX(-25px); }
+  #portfolio .thumbnail {
+    width: 60vw;
+    height: 60vh;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    position: absolute;
+    background: center/cover url("../../assets/images/filming.jpg");
+    left: 0;
+    -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3); }
+  #portfolio .portfolio-container {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    position: absolute; }
+    #portfolio .portfolio-container h3 {
+      color: #070707; }
+    #portfolio .portfolio-container .portfolio-item a {
+      text-decoration: none; }
+    #portfolio .portfolio-container .portfolio-item h2 {
+      color: #aaa; }
+      #portfolio .portfolio-container .portfolio-item h2.active {
+        color: #d94141;
+        font-size: 3rem;
+        -webkit-transform: translateX(-25px);
+        -ms-transform: translateX(-25px);
+        transform: translateX(-25px); }
 
 #about {
   background-color: #070707;

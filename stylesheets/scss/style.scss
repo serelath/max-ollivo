@@ -172,25 +172,29 @@ p {
 	background-color: #ddd;
 	position: relative;
 	z-index: 2;
-	.container {
-		height: 100%;
-	
-		.portfolio-container {
-			@include centerY;
-			h3 {
-				color: $black;
+	.thumbnail {
+		width: 60vw;
+		height: 60vh;
+		@include centerY;
+		background: center / cover url("../../assets/images/filming.jpg");
+		left: 0;
+		box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+	}
+	.portfolio-container {
+		@include centerY;
+		h3 {
+			color: $black;
+		}
+		.portfolio-item {
+			a {
+				text-decoration: none;
 			}
-			.portfolio-item {
-				a {
-					text-decoration: none;
-				}
-				h2 {
-					color: $grey;
-					&.active {
-						color: $red;
-						font-size: 3rem;
-						transform: translateX(-25px);
-					}
+			h2 {
+				color: $grey;
+				&.active {
+					color: $red;
+					font-size: 3rem;
+					transform: translateX(-25px);
 				}
 			}
 		}
