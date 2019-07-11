@@ -19,6 +19,9 @@ html {
 //////////
 // TEXT //
 //////////
+h1, h2, h3, p {
+	text-shadow: 0px 0px 2px rgba(0,0,0,0.1);
+}
 h1 {
 	font-size: 4rem;
 	letter-spacing: 5px;
@@ -120,9 +123,6 @@ p {
 		opacity: 0;
 		animation: fadeIn 0.5s forwards;
 		animation-delay: 1s;
-		&:hover {
-			color: $red;
-		}
 	}
 	video {
 		width: 117vw;
@@ -172,23 +172,22 @@ p {
 	width: 100vw;
 	position: relative;
 	z-index: 2;
-	.img {
-		@include centerY
-		width: 45vw;
-		right: 0;
-		height: 50vh;
-		transition: 1s;
-		background: center url("../../assets/images/about.jpg");
-		background-size: auto 100%;
-		box-shadow: 0 5px 50px rgba(0,0,0, 1);
-	}
 	.text {
 		@include centerY;
+		z-index: 3;
 		i {
 			font-size: 1.3rem;
 			&:hover {
 				color: $red;
 			}
 		}
+	}
+	.img {
+		height: 100%;
+		width: 50vw;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		background: 90% 0 / auto 120% url("../../assets/images/filming.jpg");
 	}
 }
