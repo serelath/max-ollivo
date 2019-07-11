@@ -186,6 +186,18 @@ p {
       background-color: white;
       border: 1px solid white; }
 
+@-webkit-keyframes zoomIn {
+  from {
+    background-size: 100% auto; }
+  to {
+    background-size: 105% auto; } }
+
+@keyframes zoomIn {
+  from {
+    background-size: 100% auto; }
+  to {
+    background-size: 105% auto; } }
+
 #portfolio {
   height: 110vh;
   width: 100vw;
@@ -200,8 +212,25 @@ p {
     transform: translateY(-50%);
     top: 50%;
     position: absolute;
-    background: center/cover url("../../assets/images/filming.jpg");
+    background-position: center;
+    background-size: 100% auto;
+    background-image: url("../../assets/images/filming.jpg");
+    -webkit-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
     left: 0; }
+    #portfolio .thumbnail.thumbnail-active {
+      opacity: 0;
+      -webkit-animation: fadeIn 1s forwards, zoomIn 2s forwards;
+      animation: fadeIn 1s forwards, zoomIn 2s forwards;
+      -webkit-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s; }
+    #portfolio .thumbnail::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: black; }
   #portfolio .portfolio-container {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -210,16 +239,23 @@ p {
     position: absolute; }
     #portfolio .portfolio-container h3 {
       color: #070707; }
-    #portfolio .portfolio-container .portfolio-item a {
-      text-decoration: none; }
-    #portfolio .portfolio-container .portfolio-item h2 {
-      color: #aaa; }
-      #portfolio .portfolio-container .portfolio-item h2.active {
-        color: #d94141;
-        font-size: 3rem;
-        -webkit-transform: translateX(-25px);
-        -ms-transform: translateX(-25px);
-        transform: translateX(-25px); }
+    #portfolio .portfolio-container .portfolio-item {
+      margin-bottom: 30px; }
+      #portfolio .portfolio-container .portfolio-item a {
+        text-decoration: none; }
+      #portfolio .portfolio-container .portfolio-item h2 {
+        color: #aaa;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 3; }
+        #portfolio .portfolio-container .portfolio-item h2.active {
+          margin-bottom: 0;
+          color: #d94141;
+          font-size: 3rem;
+          -webkit-transform: translateX(-25px);
+          -ms-transform: translateX(-25px);
+          transform: translateX(-25px);
+          z-index: 2; }
 
 #about {
   background-color: #070707;

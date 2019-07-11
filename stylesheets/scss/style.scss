@@ -166,6 +166,10 @@ p {
 ///////////////
 // PORTFOLIO //
 ///////////////
+@keyframes zoomIn {
+	from {background-size: 100% auto}
+	to {background-size: 105% auto}
+}
 #portfolio {
 	height: 110vh;
 	width: 100vw;
@@ -176,8 +180,22 @@ p {
 		width: 60vw;
 		height: 60vh;
 		@include centerY;
-		background: center / cover url("../../assets/images/filming.jpg");
+		background-position: center;
+		background-size: 100% auto;
+		background-image: url("../../assets/images/filming.jpg");
+		transition: 0s;
 		left: 0;
+		&.thumbnail-active {
+			opacity: 0;
+			animation: fadeIn 1s forwards, zoomIn 2s forwards;
+			transition: 1s;
+		}
+		&::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-color: black;
+		}
 //		&::after {
 //			content: "";
 //			width: calc(100% + 50px);
@@ -193,15 +211,21 @@ p {
 			color: $black;
 		}
 		.portfolio-item {
+			margin-bottom: 30px;
 			a {
 				text-decoration: none;
 			}
 			h2 {
 				color: $grey;
+				margin-bottom: 0;
+				position: relative;
+				z-index: 3;
 				&.active {
+					margin-bottom: 0;
 					color: $red;
 					font-size: 3rem;
 					transform: translateX(-25px);
+					z-index: 2;
 				}
 			}
 		}
