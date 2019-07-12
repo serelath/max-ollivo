@@ -15,6 +15,9 @@ html {
     font-size: 16px;
     scroll-behavior: smooth;
 }
+section {
+	overflow-x: hidden;
+}
 
 //////////
 // TEXT //
@@ -70,6 +73,11 @@ p {
 		&:hover {
 			color: $red;
 		}
+	}
+	.navbar-toggler {
+		position: relative;
+		z-index: 105;
+		color: white !important;
 	}
 	ul {
 		li {
@@ -131,12 +139,18 @@ p {
 		animation: fadeIn 1s forwards;
 		animation-delay: 1.5s;
 		opacity: 0;
+		@include mQ($sm) {
+			width: 100vw;
+		}
 	}
 	.scroll-down {
 		position: absolute;
 		@include centerX;
 		bottom: 25px;
 		div {
+			@include mQ($xs) {
+				display: none;
+			}
 			&:first-child {
 				width: 30px;
 				border: 2px solid white;
@@ -166,36 +180,28 @@ p {
 ///////////////
 // PORTFOLIO //
 ///////////////
-@keyframes zoomIn {
-	from {background-size: 100% auto}
-	to {background-size: 105% auto}
+@keyframes videoTrack {
+	from {background-position: 0 0}
+	to {background-position: 0 200vh}
 }
 #portfolio {
-	height: 120vh;
+	height: 100vh;
 	width: 100vw;
 	background-color: $white;
 	position: relative;
+	top: -1px;
 	z-index: 2;
 	.thumbnail {
-		width: 75vw;
-		height: 90vh;
+		width: 50vw;
+		height: 100vh;
 		@include centerY;
-		background-position: center;
+		background-position: 0 0;
 		background-size: 100% auto;
-		background-image: url("../../assets/images/filming.jpg");
+		background-image: url("../../assets/images/tsm-legends.jpg");
 		transition: 0s;
 		left: 0;
-		&.thumbnail-active {
-			opacity: 0;
-			animation: fadeIn 1s forwards, zoomIn 2s forwards;
-			transition: 0s;
-		}
-		&::before {
-			content: '';
-			width: 100%;
-			height: 100%;
-			background-color: black;
-		}
+		filter: brightness(0.9);transition: 0s;
+		animation: videoTrack 60s infinite linear;
 //		&::after {
 //			content: "";
 //			width: calc(100% + 50px);
@@ -205,9 +211,14 @@ p {
 //		}
 //		box-shadow: 0 5px 30px rgba(0,0,0,0.3);
 	}
-	.portfolio-container {
+	.portfolio-half {
+		width: 50vw;
 		@include centerY;
-		h3 {
+		right: 0;
+	}
+	.portfolio-container {
+		@include centerer;
+		h2 {
 			color: $black;
 		}
 		.portfolio-item {
@@ -215,7 +226,7 @@ p {
 			a {
 				text-decoration: none;
 			}
-			h2 {
+			h3 {
 				color: $grey;
 				margin-bottom: 0;
 				position: relative;
@@ -223,7 +234,7 @@ p {
 				&.active {
 					margin-bottom: 0;
 					color: $red;
-					font-size: 3rem;
+					font-size: 2rem;
 					transform: translateX(-25px);
 					z-index: 2;
 				}
@@ -241,17 +252,33 @@ p {
 	height: 100vh;
 	width: 100vw;
 	position: relative;
+	top: -2px;
 	z-index: 2;
+	@include mQ($xs) {
+		height: auto;
+	}
 	.about-container {
 		width: 50vw;
 		position: absolute;
 		@include centerY;
 		left: 0;
+		@include mQ($xs) {
+			width: 100vw;
+			position: relative;
+			top: 0;
+			transform: none;
+		}
 	}
 	.text {
 		@include centerer;
 		left: 50%;
 		z-index: 3;
+		@include mQ($xs) {
+			position: relative;
+			top: 0;
+			left: 0;
+			transform: none;
+		}
 		i {
 			font-size: 1.3rem;
 			&:hover {
@@ -265,6 +292,14 @@ p {
 		right: 0;
 		bottom: 0;
 		position: absolute;
-		background: 90% 0 / auto 120% url("../../assets/images/filming.jpg");
+		background: 80% 0 / auto 120% url("../../assets/images/filming.jpg");
+		@include mQ($xs) {
+			position: relative;
+			top: 0;
+			transform: 0;
+			height: 50vh;
+			width: 100vw;
+			background: center / cover url("../../assets/images/filming.jpg");
+		}
 	}
 }

@@ -19,6 +19,9 @@ html {
   font-size: 16px;
   scroll-behavior: smooth; }
 
+section {
+  overflow-x: hidden; }
+
 h1, h2, h3, p {
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1); }
 
@@ -62,6 +65,10 @@ p {
     animation: fadeIn 1s forwards; }
     .navbar-container .navbar-brand:hover {
       color: #d94141; }
+  .navbar-container .navbar-toggler {
+    position: relative;
+    z-index: 105;
+    color: white !important; }
   .navbar-container ul li {
     -webkit-animation: fadeIn 2s forwards;
     animation: fadeIn 2s forwards;
@@ -146,6 +153,9 @@ p {
     -webkit-animation-delay: 1.5s;
     animation-delay: 1.5s;
     opacity: 0; }
+    @media (max-width: 992px) {
+      #landing video {
+        width: 100vw; } }
   #landing .scroll-down {
     position: absolute;
     -webkit-transform: translateX(-50%);
@@ -154,6 +164,9 @@ p {
     left: 50%;
     position: absolute;
     bottom: 25px; }
+    @media (max-width: 767px) {
+      #landing .scroll-down div {
+        display: none; } }
     #landing .scroll-down div:first-child {
       width: 30px;
       border: 2px solid white;
@@ -183,72 +196,75 @@ p {
       background-color: white;
       border: 1px solid white; }
 
-@-webkit-keyframes zoomIn {
+@-webkit-keyframes videoTrack {
   from {
-    background-size: 100% auto; }
+    background-position: 0 0; }
   to {
-    background-size: 105% auto; } }
+    background-position: 0 200vh; } }
 
-@keyframes zoomIn {
+@keyframes videoTrack {
   from {
-    background-size: 100% auto; }
+    background-position: 0 0; }
   to {
-    background-size: 105% auto; } }
+    background-position: 0 200vh; } }
 
 #portfolio {
-  height: 120vh;
+  height: 100vh;
   width: 100vw;
   background-color: #eee;
   position: relative;
+  top: -1px;
   z-index: 2; }
   #portfolio .thumbnail {
-    width: 75vw;
-    height: 90vh;
+    width: 50vw;
+    height: 100vh;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     top: 50%;
     position: absolute;
-    background-position: center;
+    background-position: 0 0;
     background-size: 100% auto;
-    background-image: url("../../assets/images/filming.jpg");
+    background-image: url("../../assets/images/tsm-legends.jpg");
     -webkit-transition: 0s;
     -o-transition: 0s;
     transition: 0s;
-    left: 0; }
-    #portfolio .thumbnail.thumbnail-active {
-      opacity: 0;
-      -webkit-animation: fadeIn 1s forwards, zoomIn 2s forwards;
-      animation: fadeIn 1s forwards, zoomIn 2s forwards;
-      -webkit-transition: 0s;
-      -o-transition: 0s;
-      transition: 0s; }
-    #portfolio .thumbnail::before {
-      content: '';
-      width: 100%;
-      height: 100%;
-      background-color: black; }
-  #portfolio .portfolio-container {
+    left: 0;
+    -webkit-filter: brightness(0.9);
+    filter: brightness(0.9);
+    transition: 0s;
+    -webkit-animation: videoTrack 60s infinite linear;
+    animation: videoTrack 60s infinite linear; }
+  #portfolio .portfolio-half {
+    width: 50vw;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     top: 50%;
+    position: absolute;
+    right: 0; }
+  #portfolio .portfolio-container {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
     position: absolute; }
-    #portfolio .portfolio-container h3 {
+    #portfolio .portfolio-container h2 {
       color: #070707; }
     #portfolio .portfolio-container .portfolio-item {
       margin-bottom: 30px; }
       #portfolio .portfolio-container .portfolio-item a {
         text-decoration: none; }
-      #portfolio .portfolio-container .portfolio-item h2 {
+      #portfolio .portfolio-container .portfolio-item h3 {
         color: #aaa;
         margin-bottom: 0;
         position: relative;
         z-index: 3; }
-        #portfolio .portfolio-container .portfolio-item h2.active {
+        #portfolio .portfolio-container .portfolio-item h3.active {
           margin-bottom: 0;
           color: #d94141;
-          font-size: 3rem;
+          font-size: 2rem;
           -webkit-transform: translateX(-25px);
           -ms-transform: translateX(-25px);
           transform: translateX(-25px);
@@ -259,7 +275,11 @@ p {
   height: 100vh;
   width: 100vw;
   position: relative;
+  top: -2px;
   z-index: 2; }
+  @media (max-width: 767px) {
+    #about {
+      height: auto; } }
   #about .about-container {
     width: 50vw;
     position: absolute;
@@ -269,6 +289,14 @@ p {
     top: 50%;
     position: absolute;
     left: 0; }
+    @media (max-width: 767px) {
+      #about .about-container {
+        width: 100vw;
+        position: relative;
+        top: 0;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none; } }
   #about .text {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -278,6 +306,14 @@ p {
     position: absolute;
     left: 50%;
     z-index: 3; }
+    @media (max-width: 767px) {
+      #about .text {
+        position: relative;
+        top: 0;
+        left: 0;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none; } }
     #about .text i {
       font-size: 1.3rem; }
       #about .text i:hover {
@@ -288,4 +324,14 @@ p {
     right: 0;
     bottom: 0;
     position: absolute;
-    background: 90% 0/auto 120% url("../../assets/images/filming.jpg"); }
+    background: 80% 0/auto 120% url("../../assets/images/filming.jpg"); }
+    @media (max-width: 767px) {
+      #about .img {
+        position: relative;
+        top: 0;
+        -webkit-transform: 0;
+        -ms-transform: 0;
+        transform: 0;
+        height: 50vh;
+        width: 100vw;
+        background: center/cover url("../../assets/images/filming.jpg"); } }
