@@ -28,7 +28,8 @@ h1, h2, h3, p {
 
 h1 {
   font-size: 4rem;
-  letter-spacing: 5px; }
+  letter-spacing: 5px;
+  line-height: 1.1; }
 
 h2 {
   letter-spacing: 3px; }
@@ -274,8 +275,8 @@ p {
         background: top/100% auto url("../../assets/images/grey/chipotle.jpg"); }
       #portfolio .portfolio-container .portfolio-item:nth-child(6) {
         background: top/100% auto url("../../assets/images/grey/hamlinz-drives-luxury-cars.jpg"); }
-  #portfolio .portfolio-item h3 {
-    display: none; }
+    #portfolio .portfolio-container h3 {
+      display: none; }
 
 #about {
   background-color: #070707;

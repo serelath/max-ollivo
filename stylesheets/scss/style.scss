@@ -29,6 +29,7 @@ h1, h2, h3, p {
 h1 {
 	font-size: 4rem;
 	letter-spacing: 5px;
+	line-height: 1.1;
 }
 h2 {
 	letter-spacing: 3px;
@@ -246,87 +247,10 @@ p {
 				background: top / 100% auto url("../../assets/images/grey/hamlinz-drives-luxury-cars.jpg");
 			}
 		}
-	}
-	.portfolio-item {
-//		width: 50vw;
-//		height: 60vh;
-//		float: left;
-//		flex-grow: 2;
-//		filter: brightness(0.6) saturate(0);
-//		transition: 0.8s;
-//		&:first-child {
-//			background: center / 100% auto url("../../assets/images/tsm-legends.jpg");
-//		}
-//		&:nth-child(2) {
-//			background: center / 100% auto url("../../assets/images/meet-myth.jpg");
-//		}
-//		&:nth-child(3) {
-//			background: center / 100% auto url("../../assets/images/tsm-fortnight-cookoff.jpg");
-//		}
-//		&:nth-child(4) {
-//			background: center / 100% auto url("../../assets/images/ask-tsm.jpg");
-//		}
-//		&:nth-child(5) {
-//			background: center / 100% auto url("../../assets/images/chipotle.jpg");
-//		}
-//		&:nth-child(6) {
-//			background: center / 100% auto url("../../assets/images/hamlinz-drives-luxury-cars.jpg");
-//		}
 		h3 {
 			display: none;
 		}
 	}
-//	.thumbnail {
-//		width: 50vw;
-//		height: 100vh;
-//		@include centerY;
-//		background-position: 0 0;
-//		background-size: 100% auto;
-//		background-image: url("../../assets/images/tsm-legends.jpg");
-//		transition: 0s;
-//		left: 0;
-//		filter: brightness(0.9);transition: 0s;
-//		animation: videoTrack 60s infinite linear;
-	
-//		&::after {
-//			content: "";
-//			width: calc(100% + 50px);
-//			height: calc(100% + 50px);
-//			@include centerer;
-//			border: 1px solid rgba(0,0,0, 0.1);
-//		}
-//		box-shadow: 0 5px 30px rgba(0,0,0,0.3);
-//	}
-//	.portfolio-half {
-//		width: 50vw;
-//		@include centerY;
-//		right: 0;
-//	}
-//	.portfolio-container {
-//		@include centerer;
-//		h2 {
-//			color: $black;
-//		}
-//		.portfolio-item {
-//			margin-bottom: 30px;
-//			a {
-//				text-decoration: none;
-//			}
-//			h3 {
-//				color: $grey;
-//				margin-bottom: 0;
-//				position: relative;
-//				z-index: 3;
-//				&.active {
-//					margin-bottom: 0;
-//					color: $red;
-//					font-size: 2rem;
-//					transform: translateX(-25px);
-//					z-index: 2;
-//				}
-//			}
-//		}
-//	}
 	
 }
 

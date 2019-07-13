@@ -30,11 +30,18 @@ $(document).ready(function() {
 		$(this).find("rect").removeClass("rect");
 	})
 	
-//	$(".portfolio-item a").hover(function() {
-//		$(".portfolio-item a h3").removeClass("active");
-//		$(this).find("h3").addClass("active");
-//			$('.thumbnail').css({'background-image' : 'url("' + $(this).attr("data-image") + '")'});
-//		
-//	});
+	function isScrolledIntoView(elem)
+	{
+		var docViewTop = $(window).scrollTop();
+		var docViewBottom = docViewTop + $(window).height();
+
+		var elemTop = $(elem).offset().top;
+		var elemBottom = elemTop + $(elem).height();
+
+		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+	}
+	
+	
+	
   
 });
