@@ -30,6 +30,10 @@ $(document).ready(function() {
 		$(this).find("rect").removeClass("rect");
 	})
 	
+	var mobilevideo = document.getElementsByTagName("video")[0];
+	mobilevideo.setAttribute("playsinline", "");
+	mobilevideo.setAttribute("muted", "");
+	
 //	function isScrolledIntoView(elem)
 //	{
 //		var docViewTop = $(window).scrollTop();
