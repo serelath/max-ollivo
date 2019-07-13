@@ -14,7 +14,8 @@
 
 body, html {
   overflow-x: hidden;
-  background-color: #070707; }
+  background-color: #070707;
+  position: relative; }
 
 html {
   font-size: 16px;
@@ -128,7 +129,8 @@ p {
 #landing {
   width: 100vw;
   height: 100vh;
-  background-color: black; }
+  background-color: black;
+  position: relative; }
   #landing .portfolio-video {
     width: 100vw;
     height: 100vh; }
@@ -155,9 +157,6 @@ p {
     -webkit-animation-delay: 1.5s;
     animation-delay: 1.5s;
     opacity: 0; }
-    @media (max-width: 1200px) {
-      #landing video {
-        width: 100vw; } }
   #landing .scroll-down {
     position: absolute;
     -webkit-transform: translateX(-50%);

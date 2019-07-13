@@ -9,8 +9,9 @@
 	transition: 0.3s;
 }
 body, html {
-    overflow-x:hidden;
+    overflow-x: hidden;
 	background-color: $black;
+	position: relative;
 }
 html {
     font-size: 16px;
@@ -123,6 +124,7 @@ p {
 	width: 100vw;
 	height: 100vh;
 	background-color: black;
+	position: relative;
 	.portfolio-video {
 		width: 100vw;
 		height: 100vh;
@@ -141,9 +143,6 @@ p {
 		animation: fadeIn 1s forwards;
 		animation-delay: 1.5s;
 		opacity: 0;
-		@include mQ($md) {
-			width: 100vw;
-		}
 	}
 	.scroll-down {
 		position: absolute;
