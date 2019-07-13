@@ -24,11 +24,17 @@ $(document).ready(function() {
 	  
   });
 	
-	$(".portfolio-item a").hover(function() {
-		$(".portfolio-item a h3").removeClass("active");
-		$(this).find("h3").addClass("active");
-			$('.thumbnail').css({'background-image' : 'url("' + $(this).attr("data-image") + '")'});
-		
-	});
+	$(".portfolio-item").hover(function() {
+		$(this).find("rect").addClass("rect");
+	}, function() {
+		$(this).find("rect").removeClass("rect");
+	})
+	
+//	$(".portfolio-item a").hover(function() {
+//		$(".portfolio-item a h3").removeClass("active");
+//		$(this).find("h3").addClass("active");
+//			$('.thumbnail').css({'background-image' : 'url("' + $(this).attr("data-image") + '")'});
+//		
+//	});
   
 });

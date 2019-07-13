@@ -13,7 +13,8 @@
   transition: 0.3s; }
 
 body, html {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background-color: #070707; }
 
 html {
   font-size: 16px;
@@ -153,7 +154,7 @@ p {
     -webkit-animation-delay: 1.5s;
     animation-delay: 1.5s;
     opacity: 0; }
-    @media (max-width: 992px) {
+    @media (max-width: 1200px) {
       #landing video {
         width: 100vw; } }
   #landing .scroll-down {
@@ -209,73 +210,78 @@ p {
     background-position: 0 200vh; } }
 
 #portfolio {
-  height: 100vh;
   width: 100vw;
-  background-color: #eee;
+  background-color: #070707;
   position: relative;
-  top: -1px;
   z-index: 2; }
-  #portfolio .thumbnail {
-    width: 50vw;
-    height: 100vh;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    top: 50%;
-    position: absolute;
-    background-position: 0 0;
-    background-size: 100% auto;
-    background-image: url("../../assets/images/tsm-legends.jpg");
-    -webkit-transition: 0s;
-    -o-transition: 0s;
-    transition: 0s;
-    left: 0;
-    -webkit-filter: brightness(0.9);
-    filter: brightness(0.9);
-    transition: 0s;
-    -webkit-animation: videoTrack 60s infinite linear;
-    animation: videoTrack 60s infinite linear; }
-  #portfolio .portfolio-half {
-    width: 50vw;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    top: 50%;
-    position: absolute;
-    right: 0; }
   #portfolio .portfolio-container {
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    position: absolute; }
-    #portfolio .portfolio-container h2 {
-      color: #070707; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
     #portfolio .portfolio-container .portfolio-item {
-      margin-bottom: 30px; }
-      #portfolio .portfolio-container .portfolio-item a {
-        text-decoration: none; }
-      #portfolio .portfolio-container .portfolio-item h3 {
-        color: #aaa;
-        margin-bottom: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 50vw;
+      height: 28vw;
+      -webkit-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s;
+      overflow: hidden;
+      -webkit-filter: brightness(0.9);
+      filter: brightness(0.9);
+      position: relative; }
+      @media (max-width: 1200px) {
+        #portfolio .portfolio-container .portfolio-item {
+          width: 100vw;
+          height: 56vw; } }
+      #portfolio .portfolio-container .portfolio-item svg {
+        position: absolute;
+        top: 0;
+        left: 0; }
+      #portfolio .portfolio-container .portfolio-item .rect {
+        width: 200%;
+        height: 200%; }
+      #portfolio .portfolio-container .portfolio-item rect {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+        transform-origin: 0 100%;
+        width: 200%;
+        height: 0;
+        -webkit-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out; }
+      #portfolio .portfolio-container .portfolio-item .clipped {
         position: relative;
-        z-index: 3; }
-        #portfolio .portfolio-container .portfolio-item h3.active {
-          margin-bottom: 0;
-          color: #d94141;
-          font-size: 2rem;
-          -webkit-transform: translateX(-25px);
-          -ms-transform: translateX(-25px);
-          transform: translateX(-25px);
-          z-index: 2; }
+        z-index: 5; }
+      #portfolio .portfolio-container .portfolio-item:first-child {
+        background: top/100% auto url("../../assets/images/grey/tsm-legends.jpg"); }
+      #portfolio .portfolio-container .portfolio-item:nth-child(2) {
+        background: top/100% auto url("../../assets/images/grey/meet-myth.jpg"); }
+      #portfolio .portfolio-container .portfolio-item:nth-child(3) {
+        background: top/100% auto url("../../assets/images/grey/tsm-fortnight-cookoff.jpg"); }
+      #portfolio .portfolio-container .portfolio-item:nth-child(4) {
+        background: top/100% auto url("../../assets/images/grey/ask-tsm.jpg"); }
+      #portfolio .portfolio-container .portfolio-item:nth-child(5) {
+        background: top/100% auto url("../../assets/images/grey/chipotle.jpg"); }
+      #portfolio .portfolio-container .portfolio-item:nth-child(6) {
+        background: top/100% auto url("../../assets/images/grey/hamlinz-drives-luxury-cars.jpg"); }
+  #portfolio .portfolio-item h3 {
+    display: none; }
 
 #about {
   background-color: #070707;
   height: 100vh;
   width: 100vw;
   position: relative;
-  top: -2px;
   z-index: 2; }
   @media (max-width: 767px) {
     #about {
