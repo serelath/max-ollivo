@@ -240,7 +240,7 @@ p {
       @media (max-width: 1200px) {
         #portfolio .portfolio-container .portfolio-item {
           width: 100vw;
-          height: 56vw; } }
+          height: 55vw; } }
       #portfolio .portfolio-container .portfolio-item svg {
         position: absolute;
         top: 0;
