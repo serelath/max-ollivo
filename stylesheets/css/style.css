@@ -130,7 +130,8 @@ p {
   width: 100vw;
   height: 100vh;
   background-color: black;
-  position: relative; }
+  position: relative;
+  overflow-y: hidden; }
   #landing .portfolio-video {
     width: 100vw;
     height: 100vh; }
